@@ -44,7 +44,11 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google
 
 ### 使用GIMP去除水印
 
-
+1.打开一张图片 
+2.选择图章工具，鼠标移到图片上。 
+3.按住Ctrl键，点击鼠标选择复制源点，选择合适的源点很 重要。 
+4.松开Ctrl键，点击水印，这时源点就被复制到水印上盖住 水印了。 
+5.重复3和4步骤，把水印慢慢覆盖。如果点错了，可以在历史记录里返回上一步。
 
 
 
