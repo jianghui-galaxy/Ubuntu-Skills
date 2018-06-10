@@ -26,10 +26,10 @@
 
  `sudo gedit /usr/share/applications/google-chrome.desktop`
 
- 把Exec部分修改成如下内容，注意两处版本号
+ 把Exec部分修改成如下内容，注意`/home/jh`改为自己的，且不能使用`$HOME`，两处版本号与前面创建文件夹一致。
 
 ```
-Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=$HOME/.config/google-chrome/PepperFlash/56.0.2924.87/libpepflashplayer.so --ppapi-flash-version=56.0.2924.87
+Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google-chrome/PepperFlash/56.0.2924.87/libpepflashplayer.so --ppapi-flash-version=56.0.2924.87
 ```
 
  ![gedit](imgs/gedit.png)
@@ -37,3 +37,22 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=$HOME/.config/google-ch
 
 
 5、重启Chrome浏览器
+
+
+
+
+
+### 使用GIMP去除水印
+
+
+
+
+
+另外GIMP默认保存的是cfx格式，如果需要png或者jpg格式，需要导出（Export）
+
+
+
+
+
+
+
