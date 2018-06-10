@@ -29,7 +29,7 @@
  把Exec部分修改成如下内容，注意两处版本号
 
 ```
-Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google-chrome/PepperFlash/56.0.2924.87/libpepflashplayer.so --ppapi-flash-version=56.0.2924.87
+Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=$HOME/.config/google-chrome/PepperFlash/56.0.2924.87/libpepflashplayer.so --ppapi-flash-version=56.0.2924.87
 ```
 
  ![gedit](imgs/gedit.png)
