@@ -50,9 +50,13 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google
 4.松开Ctrl键，点击水印，这时源点就被复制到水印上盖住 水印了。 
 5.重复3和4步骤，把水印慢慢覆盖。如果点错了，可以在历史记录里返回上一步。
 
+ ![Screenshot from 2018-06-11 01:01:35](imgs/Screenshot from 2018-06-11 01:01:35.png)
 
+另外，
 
-另外GIMP默认保存的是cfx格式，如果需要png或者jpg格式，需要导出（Export）
+1、如果工具栏不见了，在Windows菜单下面新建一个toolbox（New ToolBox）
+
+2、GIMP默认保存的是cfx格式，如果需要png或者jpg格式，需要导出（Export）
 
 
 
