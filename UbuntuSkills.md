@@ -40,7 +40,7 @@
 
 1、Typora （deb）
 
-2、Chrome （deb包括AdblockPlus插件、flashplayer插件、截长图插件）
+2、Chrome （deb，包括AdblockPlus插件、flashplayer插件、截长图插件）
 
 3、Teamviewer（deb）
 
@@ -63,7 +63,7 @@ sudo apt-get install -y nautilus-open-terminal  ##右键菜单加入open tab（�
 
 sudo add-apt-repository ppa:indicator-multiload/stable-daily
 sudo apt-get update
-sudo apt-get install indicator-multiload     ##监控插件![multiload](imgs/multiload.png)
+sudo apt-get install indicator-multiload     ##监控插件
 
 ```
 
