@@ -1,5 +1,106 @@
 [TOC]
 
+### 制作U盘启动
+
+1、查看U盘的卷标，并卸载U盘
+
+`sudo fdisk -l`
+
+`sudo umount /dev/sdb1`
+
+2、写入系统镜像到U盘
+
+`sudo dd if=./ubuntu-13.04-beta2-desktop-amd64.iso   of=/dev/sdb`
+
+
+
+
+
+### Ubuntu安装搜狗输入法
+
+1、到https://pinyin.sogou.com/linux/下载deb包
+
+2、通过Ubuntu软件中心打开，点击安装（或者`dpkg -i sogoupinyin_2.2.0.0102_amd64.deb`）
+
+3、把键盘输入设置为fcitx，依次打开右上角（System Settings）系统设置->（Language Support）语言支持->（Keyboard input method system）键盘输入方式系统，选择fcitx
+
+ ![fctix](imgs/fctix.png)
+
+4、在Dash（按Windows键）搜索fcitx，打开fcitx configuration，输入法配置中点击那个`+`加号，去掉勾选“Only show current Language” ，然后搜索框输入sog，添加搜狗拼音，点击上下箭头把搜狗拼音移动到第一位，作为默认的输入法。最后logout（注销），重新登录就可以在屏幕上面看到搜狗输入法图标了
+
+ ![addsogou](imgs/addsogou.png)
+
+
+
+
+
+### 刚装完Ubuntu后需要安装哪些软件？
+
+**deb、tar.gz安装包**
+
+1、Typora （deb）
+
+2、Chrome （deb包括AdblockPlus插件、flashplayer插件、截长图插件）
+
+3、Teamviewer（deb）
+
+4、VirtualBox（deb）
+
+5、WPS（deb）
+
+6、InteliJ IDEA（tar.gz）
+
+
+
+**apt方式在线安装**
+
+```
+sudo apt-get install -y git
+sudo apt-get install -y vim
+sudo apt-get install -y meld 
+sudo apt-get install -y shutter
+sudo apt-get install -y nautilus-open-terminal  ##右键菜单加入open tab（打开标签页）
+
+sudo add-apt-repository ppa:indicator-multiload/stable-daily
+sudo apt-get update
+sudo apt-get install indicator-multiload     ##监控插件![multiload](imgs/multiload.png)
+
+```
+
+ ![multiload](imgs/multiload.png)
+
+
+
+**可选软件**
+
+GIMP P图工具
+
+Kazam 录屏工具
+
+kdenlive 视频剪辑
+
+
+
+
+
+### Ubuntu设置软件开机启动
+
+1、进程开机启动把启动命令加入  `/etc/rc.d/rc.local` 文件
+
+2、启动命令加入到用户登录时要执行的文件 （按照先后顺序，只执行最先找到的一个）
+
+`/ect/profile` >  `$HOME/.bash_profile` >  `$HOME/.bash_login` >  `$HOME/.profile`
+
+3、Dash（按Windows键）输入startup，在终端输入命令
+
+`gnome-session-properties`
+
+ ![startup](imgs/startup.png)
+
+
+
+
+
 
 
 ### Ubuntu Chrome无法播放视频，需要安装flashplayer
