@@ -32,6 +32,64 @@
 
 
 
+### Ubuntu配置国内源
+
+说明
+
+```
+Universe：没有官方维护的开源软件
+Main：官方维护的开源软件
+Mulitverse：非官方维护的非开源软件（具有版权或限制使用）
+Restricted：官方维护的非开源软件
+Source Code：源代码
+```
+
+以下指针对Ubuntu14.04，任意选择一个添加到`/etc/apt/sources.list`然后执行`sudo apt-get update`刷新源列表就行
+
+`sudo gedit /etc/apt/sources.list`
+
+`sudo apt-get update`
+
+```
+##网易
+deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+##搜狐
+deb http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+##兰州大学
+deb http://mirror.lzu.edu.cn/ubuntu/ trusty main multiverse restricted universe
+deb http://mirror.lzu.edu.cn/ubuntu/ trusty-backports main multiverse restricted universe
+deb http://mirror.lzu.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe
+deb http://mirror.lzu.edu.cn/ubuntu/ trusty-security main multiverse restricted universe
+deb http://mirror.lzu.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe
+deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty main multiverse restricted universe
+deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-backports main multiverse restricted universe
+deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe
+deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-security main multiverse restricted universe
+deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe
+```
+
+
+
 
 
 ### 刚装完Ubuntu后需要安装哪些软件？
@@ -167,7 +225,20 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google
 
 
 
+### Ubuntu 新建桌面图标文件示例
 
+desktop文件路径`/usr/share/applications/`
 
-
+```
+[Desktop Entry]
+Name=Typora
+Comment=a minimal Markdown reading & writing app. 
+GenericName=Markdown Editor
+Exec=/path/typora %U
+Icon=/path/typora
+Type=Application
+StartupNotify=true
+Categories=Office;WordProcessor;
+MimeType=text/markdown;text/x-markdown;
+```
 
