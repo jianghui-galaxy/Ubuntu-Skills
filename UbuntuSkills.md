@@ -119,6 +119,9 @@ sudo apt-get install -y meld
 sudo apt-get install -y shutter
 sudo apt-get install -y nautilus-open-terminal  ##右键菜单加入open tab（打开标签页）
 
+sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
+sudo apt-get install -y mysql-workbench
+
 sudo add-apt-repository ppa:indicator-multiload/stable-daily
 sudo apt-get update
 sudo apt-get install indicator-multiload     ##监控插件
