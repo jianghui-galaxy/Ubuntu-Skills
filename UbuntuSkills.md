@@ -87,19 +87,9 @@ deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-proposed main multiverse restric
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-security main multiverse restricted universe
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe
 
-## SJTU
-deb http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty main restricted universe multiverse
-deb http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-security main restricted universe multiverse
-deb http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-updates main restricted universe multiverse
-deb http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-proposed main restricted universe multiverse
-deb http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-backports main restricted universe multiverse
-deb-src http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty main restricted universe multiverse
-deb-src http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-security main restricted universe multiverse
-deb-src http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-updates main restricted universe multiverse
-deb-src http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-proposed main restricted universe multiverse
-deb-src http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com trusty-backports main restricted universe multiverse
-```
 
+```
+http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com
 
 
 
