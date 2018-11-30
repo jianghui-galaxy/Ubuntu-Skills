@@ -10,23 +10,43 @@
 
 2、写入系统镜像到U盘
 
-`sudo dd if=./ubuntu-13.04-beta2-desktop-amd64.iso   of=/dev/sdb`
+`sudo dd if=./ubuntu-16.04.5-desktop-amd64.iso   of=/dev/sdb1`
 
-
+ ![startup-U](imgs/startup-U.png)
 
 
 
 ### Ubuntu安装搜狗输入法
 
-1、到https://pinyin.sogou.com/linux/下载deb包
+1、检查Ubuntu是否安装了Language Support
 
-2、通过Ubuntu软件中心打开，点击安装（或者`dpkg -i sogoupinyin_2.2.0.0102_amd64.deb`）
+打开右上角（System Settings）系统设置->（Language Support）语言支持，如果找不到说明没有安装Language Support，通过下面的命令安装，或者在左上角的Dash中搜索并打开Ubuntu软件中心（Ubuntu SoftWare Center），在里面搜索“lang”点击安装
 
-3、把键盘输入设置为fcitx，依次打开右上角（System Settings）系统设置->（Language Support）语言支持->（Keyboard input method system）键盘输入方式系统，选择fcitx
+```
+sudo apt-get install language-selector-gnome
+```
+
+ ![languageSupport](imgs/languageSupport.png)
+
+2、检查是否安装了fcitx configuration
+
+在左上角的Dash中搜索fcitx，看是否可以搜到fcitx configuration，如果没有，可以通过如下命令安装，或者打开Ubuntu软件中心（Ubuntu SoftWare Center），在里面搜索“fcitx”点击安装
+
+```
+sudo apt-get install fcitx
+```
+
+ ![fcitx](imgs/fcitx.png)
+
+3、到https://pinyin.sogou.com/linux/下载deb包
+
+4、通过Ubuntu软件中心打开，点击安装（或者`sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb`）
+
+5、把键盘输入设置为fcitx（可能需要安装），依次打开右上角（System Settings）系统设置->（Language Support）语言支持->（Keyboard input method system）键盘输入方式系统，选择fcitx
 
  ![fctix](imgs/fctix.png)
 
-4、在Dash（按Windows键）搜索fcitx，打开fcitx configuration，输入法配置中点击那个`+`加号，去掉勾选“Only show current Language” ，然后搜索框输入sog，添加搜狗拼音，点击上下箭头把搜狗拼音移动到第一位，作为默认的输入法。最后logout（注销），重新登录就可以在屏幕上面看到搜狗输入法图标了
+4、在Dash（按Windows键）搜索fcitx，打开fcitx configuration，输入法配置中点击那个`+`加号，去掉勾选“Only show current Language” ，然后搜索框输入sog，添加搜狗拼音，点击上下箭头把搜狗拼音移动到第一位，作为默认的输入法。最后点击关机图标处的logout（注销），重新登录就可以在屏幕上面看到搜狗输入法图标了
 
  ![addsogou](imgs/addsogou.png)
 
@@ -89,6 +109,40 @@ deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-updates main multiverse restrict
 ```
 
 
+
+以下指针对Ubuntu16.04
+
+```
+##阿里云
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+##测试版源
+deb http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse
+# 源码
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+##测试版源
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse
+# Canonical 合作伙伴和附加
+deb http://archive.canonical.com/ubuntu/ xenial partner
+deb http://extras.ubuntu.com/ubuntu/ xenial main
+
+###清华大学
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse
+```
 
 
 
