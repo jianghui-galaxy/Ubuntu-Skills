@@ -1,6 +1,6 @@
 [TOC]
 
-### 制作U盘启动
+### 命令行制作U盘启动
 
 1、查看U盘的卷标，并卸载U盘
 
@@ -16,6 +16,8 @@
 
 
 
+
+
 ### Ubuntu安装搜狗输入法
 
 1、检查Ubuntu是否安装了Language Support
@@ -28,6 +30,8 @@ sudo apt-get install language-selector-gnome
 
  ![languageSupport](imgs/languageSupport.png)
 
+
+
 2、检查是否安装了fcitx configuration
 
 在左上角的Dash中搜索fcitx，看是否可以搜到fcitx configuration，如果没有，可以通过如下命令安装，或者打开Ubuntu软件中心（Ubuntu SoftWare Center），在里面搜索“fcitx”点击安装
@@ -38,6 +42,8 @@ sudo apt-get install fcitx
 
  ![fcitx](imgs/fcitx.png)
 
+
+
 3、到https://pinyin.sogou.com/linux/下载deb包
 
 4、通过Ubuntu软件中心打开，点击安装（或者`sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb`）
@@ -46,9 +52,13 @@ sudo apt-get install fcitx
 
  ![fctix](imgs/fctix.png)
 
-4、在Dash（按Windows键）搜索fcitx，打开fcitx configuration，输入法配置中点击那个`+`加号，去掉勾选“Only show current Language” ，然后搜索框输入sog，添加搜狗拼音，点击上下箭头把搜狗拼音移动到第一位，作为默认的输入法。最后点击关机图标处的logout（注销），重新登录就可以在屏幕上面看到搜狗输入法图标了
+
+
+6、在Dash（按Windows键）搜索fcitx，打开fcitx configuration，输入法配置中点击那个`+`加号，去掉勾选“Only show current Language” ，然后搜索框输入sog，添加搜狗拼音，点击上下箭头把搜狗拼音移动到第一位，作为默认的输入法。最后点击关机图标处的logout（注销），重新登录就可以在屏幕上面看到搜狗输入法图标了
 
  ![addsogou](imgs/addsogou.png)
+
+
 
 
 
@@ -106,8 +116,6 @@ deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-backports main multiverse restri
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-security main multiverse restricted universe
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe
-
-
 ```
 http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com
 
@@ -281,6 +289,8 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google
 1、如果工具栏不见了，在Windows菜单下面新建一个toolbox（New ToolBox）
 
 2、GIMP默认保存的是cfx格式，如果需要png或者jpg格式，需要导出（Export）
+
+
 
 
 
