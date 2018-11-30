@@ -71,6 +71,18 @@ Source Code：源代码
 `sudo apt-get update`
 
 ```
+##阿里
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
 ##网易
 deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
@@ -83,18 +95,6 @@ deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe m
 deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
 deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
 
-##搜狐
-deb http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
-
 ##兰州大学
 deb http://mirror.lzu.edu.cn/ubuntu/ trusty main multiverse restricted universe
 deb http://mirror.lzu.edu.cn/ubuntu/ trusty-backports main multiverse restricted universe
@@ -106,8 +106,10 @@ deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-backports main multiverse restri
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-security main multiverse restricted universe
 deb-src http://mirror.lzu.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe
-```
 
+
+```
+http://ftp.sjtu.edu.cn/sites/archive.ubuntu.com
 
 
 以下指针对Ubuntu16.04
@@ -172,6 +174,9 @@ sudo apt-get install -y vim
 sudo apt-get install -y meld 
 sudo apt-get install -y shutter
 sudo apt-get install -y nautilus-open-terminal  ##右键菜单加入open tab（打开标签页）
+
+sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
+sudo apt-get install -y mysql-workbench
 
 sudo add-apt-repository ppa:indicator-multiload/stable-daily
 sudo apt-get update
