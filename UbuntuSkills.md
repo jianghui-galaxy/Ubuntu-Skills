@@ -296,7 +296,7 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google
 
 ### Ubuntu 新建桌面图标文件示例
 
-desktop文件路径`/usr/share/applications/`
+desktop文件路径：系统：`/usr/share/applications/`，用户： `~/.local/share/applications/`
 
 ```
 [Desktop Entry]
