@@ -311,3 +311,13 @@ Categories=Office;WordProcessor;
 MimeType=text/markdown;text/x-markdown;
 ```
 
+
+
+### Ubuntu 卸载VMWare Workstation
+
+```
+cd /usr/bin
+sudo vmware-installer --uninstall-product vmware-workstation
+```
+
+
