@@ -328,3 +328,37 @@ sudo vmware-installer --uninstall-product vmware-workstation
 
 2、GIMP默认保存的是cfx格式，如果需要png或者jpg格式，需要导出（Export）
 
+<<<<<<< HEAD
+=======
+
+
+
+
+### Ubuntu 新建桌面图标文件示例
+
+desktop文件路径：系统：`/usr/share/applications/`，用户： `~/.local/share/applications/`
+
+```
+[Desktop Entry]
+Name=Typora
+Comment=a minimal Markdown reading & writing app. 
+GenericName=Markdown Editor
+Exec=/path/typora %U
+Icon=/path/typora
+Type=Application
+StartupNotify=true
+Categories=Office;WordProcessor;
+MimeType=text/markdown;text/x-markdown;
+```
+
+
+
+### Ubuntu 卸载VMWare Workstation
+
+```
+cd /usr/bin
+sudo vmware-installer --uninstall-product vmware-workstation
+```
+
+
+>>>>>>> df97a85f94435e73f813c959713ea603f9fff273
