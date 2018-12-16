@@ -1,3 +1,5 @@
+# Ubuntu使用技巧总结
+
 [TOC]
 
 ### 命令行制作U盘启动
@@ -44,7 +46,7 @@ sudo apt-get install fcitx
 
 
 
-3、到https://pinyin.sogou.com/linux/下载deb包
+3、到 https://pinyin.sogou.com/linux/ 下载deb包
 
 4、通过Ubuntu软件中心打开，点击安装（或者`sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb`）
 
@@ -266,6 +268,42 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google
 
 
 
+### Ubuntu 新建桌面图标文件示例
+
+desktop文件路径：系统：`/usr/share/applications/`，用户： `~/.local/share/applications/`
+
+```
+[Desktop Entry]
+Name=Firefox
+Icon=/home/jh/firefox/browser/chrome/icons/default/default64.png
+Exec=/home/jh/firefox/firefox %u
+Comment=Custom definition for Firefox
+Encoding=UTF-8
+Version=1.0
+Type=Application
+```
+
+
+
+```
+Name=MyBase7
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Icon=/home/jh/myBase7/images/nyf_logo_128.png
+Exec=/home/jh/myBase7/myBase %u
+Comment=Custom App
+```
+
+
+
+### Ubuntu 卸载VMWare Workstation
+
+```
+cd /usr/bin
+sudo vmware-installer --uninstall-product vmware-workstation
+```
+
 
 
 ### 使用GIMP去除水印
@@ -289,25 +327,4 @@ Exec=/usr/bin/google-chrome-stable %U --ppapi-flash-path=/home/jh/.config/google
 1、如果工具栏不见了，在Windows菜单下面新建一个toolbox（New ToolBox）
 
 2、GIMP默认保存的是cfx格式，如果需要png或者jpg格式，需要导出（Export）
-
-
-
-
-
-### Ubuntu 新建桌面图标文件示例
-
-desktop文件路径`/usr/share/applications/`
-
-```
-[Desktop Entry]
-Name=Typora
-Comment=a minimal Markdown reading & writing app. 
-GenericName=Markdown Editor
-Exec=/path/typora %U
-Icon=/path/typora
-Type=Application
-StartupNotify=true
-Categories=Office;WordProcessor;
-MimeType=text/markdown;text/x-markdown;
-```
 
