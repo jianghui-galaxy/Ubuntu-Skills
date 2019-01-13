@@ -291,7 +291,7 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 Icon=/home/jh/myBase7/images/nyf_logo_128.png
-Exec=/home/jh/myBase7/myBase %u
+Exec=/home/jh/myBase7/myBase.run
 Comment=Custom App
 ```
 
